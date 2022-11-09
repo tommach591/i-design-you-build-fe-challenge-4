@@ -1,0 +1,43 @@
+.Header {
+  display: flex;
+  align-items: center;
+
+  width: 100vw;
+  height: 7rem;
+  z-index: 1;
+}
+
+.Logo {
+  font-size: 32px;
+  font-family: "Noto Sans";
+  color: white;
+
+  position: relative;
+  left: 4rem;
+}
+
+.InstallButton {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
+  border-radius: 30px;
+  height: 2rem;
+  width: 7rem;
+
+  background-color: #214b6b;
+
+  position: relative;
+  left: 101rem;
+}
+
+.Headset {
+  margin: 0.5rem;
+}
+
+.InstallText > h2 {
+  width: 3.25rem;
+
+  text-align: left;
+  color: white;
+}
