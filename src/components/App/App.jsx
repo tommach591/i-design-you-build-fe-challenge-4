@@ -23,7 +23,7 @@ function App() {
   return (
     <div className="App">
       <Header isMobile={isMobile} />
-      <Carousel isMobile={isMobile} />
+      <Carousel isMobile={isMobile} data={data} />
       <div className="Background">
         <div className="Ellipse" />
       </div>

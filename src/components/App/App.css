@@ -4,6 +4,7 @@
   height: 200vh;
   background-color: #1b2837;
   overflow: hidden;
+  z-index: 0;
 }
 
 .Background {
@@ -17,5 +18,5 @@
   height: 21.5rem;
   background: #4d6e95;
   filter: blur(185px);
-  overflow: hidden;
+  z-index: -1;
 }
