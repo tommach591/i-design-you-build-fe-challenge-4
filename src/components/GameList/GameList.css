@@ -1,0 +1,102 @@
+.GameList {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin: 2rem;
+  margin-top: 8rem;
+}
+
+.NewTrending {
+  display: flex;
+  align-items: center;
+
+  position: relative;
+  left: -48rem;
+}
+
+.NewTrending > h1 {
+  font-size: 32px;
+  font-weight: bolder;
+  color: white;
+}
+
+.Bar {
+  width: 8rem;
+  height: 0.625rem;
+  border-radius: 20px;
+  background: #214b6b;
+  margin: 1rem;
+}
+
+.Criteria {
+  display: flex;
+  margin-top: 3rem;
+}
+
+.Search {
+  width: 17rem;
+  height: 2.5rem;
+
+  background: #1a3a53;
+  border-radius: 30px;
+
+  display: flex;
+  justify-content: left;
+  align-items: center;
+
+  position: relative;
+  left: -36rem;
+}
+
+.Search > input {
+  margin-left: 1rem;
+  border: 0;
+  outline: 0;
+  background: #1a3a53;
+
+  width: 14.5rem;
+}
+
+.Sort {
+  display: flex;
+  align-items: center;
+
+  position: relative;
+  left: 35rem;
+}
+
+.Sort:hover {
+  cursor: pointer;
+}
+
+.Sort > h2 {
+  color: white;
+  margin-right: 2rem;
+}
+
+.Choice {
+  width: 17rem;
+  height: 2.5rem;
+
+  background: #1a3a53;
+  border-radius: 30px;
+
+  display: flex;
+  justify-content: left;
+  align-items: center;
+}
+
+.Choice > h2 {
+  margin-left: 1rem;
+  width: 200px;
+
+  color: white;
+}
+
+.NoGame {
+  margin: 5rem;
+  font-size: 32px;
+  font-weight: bold;
+
+  color: white;
+}

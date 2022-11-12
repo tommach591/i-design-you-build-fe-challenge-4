@@ -1,0 +1,44 @@
+.Game {
+  width: 1300px;
+  height: 245px;
+  background: #17202d;
+  border-radius: 30px;
+
+  margin-top: 3rem;
+
+  display: flex;
+}
+
+.Game:hover {
+  cursor: pointer;
+}
+
+.GameImage {
+  border-radius: 30px 0px 0px 30px;
+}
+
+.GameDescription {
+  padding: 3rem;
+}
+
+.GameName {
+  font-size: 32px;
+  width: 40rem;
+  color: white;
+  margin-bottom: 0.75rem;
+  margin-left: 0.85rem;
+}
+
+.GameTags {
+  color: rgba(255, 255, 255, 0.5);
+  margin-bottom: 1.5rem;
+  margin-left: 0.85rem;
+}
+
+.GamePrice {
+  font-size: 40px;
+  font-weight: bold;
+  color: white;
+
+  text-align: right;
+}

@@ -82,6 +82,7 @@ function Carousel({ isMobile, data }) {
             return (
               <div
                 className={index === i ? "Circle On" : "Circle Off"}
+                key={i}
                 onClick={() => {
                   i > 0 ? setPrev(i - 1) : setPrev(5);
                   setIndex(i);
