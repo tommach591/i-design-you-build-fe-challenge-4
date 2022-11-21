@@ -30,3 +30,9 @@ body {
   z-index: -1;
   top: 12rem;
 }
+
+@media (max-width: 768px) {
+  .Ellipse {
+    top: 7rem;
+  }
+}

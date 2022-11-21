@@ -139,7 +139,45 @@ function GameList({ isMobile, data, isBottom, setIsBottom }) {
   }
 
   function getMobile() {
-    return <div>Mobile</div>;
+    return (
+      <div className="GameList">
+        <div className="NewTrending">
+          <div className="Bar" />
+          <h1>New & Trending</h1>
+          <div className="Bar" />
+        </div>
+        <div className="Criteria">
+          <div className="Search">
+            <input
+              type="text"
+              id="search"
+              name="search"
+              placeholder="Search"
+              ref={searchInput}
+              onChange={() => {
+                setSearch(searchInput.current.value);
+              }}
+            />
+          </div>
+          <div className="Sort">
+            <h2>Sort by:</h2>
+            <div
+              className="Choice"
+              onClick={() => {
+                let newSort = sort;
+                newSort < 3 ? newSort++ : (newSort = 0);
+                setSort(newSort);
+              }}
+            >
+              <h2>{sortCriterias[sort]}</h2>
+            </div>
+          </div>
+        </div>
+        <div className="List">
+          {list.length > 0 ? list : <h1 className="NoGame">No games</h1>}
+        </div>
+      </div>
+    );
   }
 
   return isMobile ? getMobile() : getWeb();

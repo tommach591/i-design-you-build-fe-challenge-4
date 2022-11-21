@@ -45,3 +45,17 @@
 .Off {
   background: rgba(255, 255, 255, 0.5);
 }
+
+@media (max-width: 768px) {
+  .CarouselImages > img {
+    margin: 1rem;
+  }
+
+  .Bright {
+    height: 11rem;
+  }
+
+  .Faded {
+    height: 11rem;
+  }
+}

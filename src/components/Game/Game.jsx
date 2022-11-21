@@ -28,7 +28,29 @@ function Game({ isMobile, gameInfo }) {
   }
 
   function getMobile() {
-    return <div>Mobile</div>;
+    return gameInfo ? (
+      <div
+        className="Game"
+        onClick={() => {
+          window.location.href = gameInfo.link;
+        }}
+      >
+        <img className="GameImage" src={gameInfo.image} alt="" />
+        <div className="GameDescription">
+          <h1 className="GameName">{gameInfo.title}</h1>
+          <h2 className="GameTags">{gameInfo.tags.join(", ")}</h2>
+          <div className="Bar" />
+          <h1 className="GamePrice">
+            {gameInfo.price.toLocaleString("en-US", {
+              style: "currency",
+              currency: "USD",
+            })}
+          </h1>
+        </div>
+      </div>
+    ) : (
+      <div />
+    );
   }
 
   return isMobile ? getMobile() : getWeb();

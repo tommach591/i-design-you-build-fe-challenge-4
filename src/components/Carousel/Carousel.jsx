@@ -98,7 +98,61 @@ function Carousel({ isMobile, data }) {
   }
 
   function getMobile() {
-    return <div>Mobile</div>;
+    return (
+      <div className="Carousel">
+        {carousel.length > 0 ? (
+          <div className="CarouselImages">
+            <img
+              key={carousel[prev].id}
+              className="Faded"
+              src={carousel[prev].image}
+              alt={carousel[prev].title}
+              onClick={() => {
+                rotateLeft();
+                setTimer(5);
+              }}
+            />
+            <img
+              key={carousel[index].id}
+              className="Bright"
+              src={carousel[index].image}
+              alt={carousel[index].title}
+              onClick={() => {
+                window.location.href = carousel[index].link;
+              }}
+            />
+            <img
+              key={carousel[next].id}
+              className="Faded"
+              src={carousel[next].image}
+              alt={carousel[next].title}
+              onClick={() => {
+                rotateRight();
+                setTimer(5);
+              }}
+            />
+          </div>
+        ) : (
+          <div />
+        )}
+        <div className="CircleSlider">
+          {carousel.map((e, i) => {
+            return (
+              <div
+                className={index === i ? "Circle On" : "Circle Off"}
+                key={i}
+                onClick={() => {
+                  i > 0 ? setPrev(i - 1) : setPrev(5);
+                  setIndex(i);
+                  i < 5 ? setNext(i + 1) : setNext(0);
+                  setTimer(5);
+                }}
+              />
+            );
+          })}
+        </div>
+      </div>
+    );
   }
 
   return isMobile ? getMobile() : getWeb();
